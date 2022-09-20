@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .task-2 {
+            display: block;
+            font-family: arial;
+            font-size: 0.8em;
+            color: #525252;
+            background-color: #fff;
+            margin: 0.5em;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        section {
+            background-color: #faf8f6;
+            align-items: normal;
+            padding: 2em;
+        }
+
+        header {
+            height: 120px;
+            background: linear-gradient(90deg, #f2a05d, #f68571);
+        }
+
+        .header-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            height: inherit;
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        .wax-logo-img {
+            width: 120px;
+        }
+
+        .wax-logo-border {
+            border-left: 1px solid white;
+            width: 1px;
+            height: 50px;
+        }
+
+        .wax-logo-heading {
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .portrait-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .portrait-section p {
+            margin-left: 1em;
+        }
+
+        .portrait {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        p {
+            line-height: 1.8em;
+        }
+
+        p.paragraph-hidden {
+            display: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 16px;
+            border: none;
+            cursor: pointer;
+            background: #f2a15d;
+            color: #fff
+        }
+
+        button:hover {
+            opacity: 0.90;
+        }
+
+        @media (max-width: 420px) {
+            .header-section {
+                flex-direction: column;
+                width: auto;
+            }
+
+            .wax-logo-border {
+                border-left: 0px solid white;
+                border-bottom: 1px solid white;
+                width: 120px;
+
+            }
+
+            .wax-logo-img {
+                padding-top: 10px;
+            }
+
+
+        }
+    </style>
+    <title>Wax Interactive Tasks</title>
+</head>
+
+
+<body class="task-2">
+    <header>
+        <div class="header-section">
+            <img src="./img/wax-logo-white.png" class="wax-logo-img" alt="WAX" />
+            <div class="wax-logo-border"></div>
+            <h2 class="wax-logo-heading">Development</h2>
+        </div>
+    </header>
+
+    <section>
+        <div class="portrait-section">
+            <img src="./img/face.jpg" class="portrait" alt="Josh Collins" />
+
+            <p style="font-weight: bold;">By Josh Collins</p>
+        </div>
+
+        <p>We craft technology solutions, with passion!</p>
+
+        <p>Our extensive experience across the ever changing digital landscape provides us with the knowledge to create
+            custom digital solutions that give businesses the competitive edge.</p>
+
+        <p class="paragraph-hidden paragraph-selection">We work with companies to design an application that gives them
+            a professional
+            brand
+            presence, streamlines
+            and
+            automates their processes and integrates the right tools to get the platform working directly for the
+            business.
+        </p>
+
+        <p class="paragraph-hidden paragraph-selection">Our services extend to motion graphic design and video editing,
+            integration and
+            management of webinars,
+            virtual
+            and augmented reality and interactive experiences. </p>
+        <button id="btn">Read More</button>
+    </section>
+</body>
+
+<script>
+    // Task 2 - FrontEnd Development
+
+    paragraphSelection = document.getElementsByClassName('paragraph-selection');
+    const btn = document.getElementById('btn')
+    let ReadBooleanFlag = false;
+    btn.onclick = () => {
+        (ReadBooleanFlag ? btn.innerHTML = `Read more` : btn.innerHTML = `Read less`)
+        ReadBooleanFlag = !ReadBooleanFlag
+        for (var i = 0, len = paragraphSelection.length; i < len; i++) {
+            paragraphSelection[i].classList.toggle('paragraph-hidden');
+        }
+    }
+
+
+</script>
+
+</html>

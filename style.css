@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Global Layout */
+
+:root {
+  --width-section: 40%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,13 +16,24 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  margin: 20px;
 }
 
 section {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+a {
+  padding: 10px 0px;
+  display: block;
+  font-size: 0.8em;
+}
+
+/* Task 1 Layout */
 
 input {
   width: 7em;
@@ -29,8 +46,14 @@ input {
 }
 textarea {
   display: block;
-  width: 30em;
-  height: 30em;
+  width: var(--width-section);
+  height: 20em;
   margin: 0;
   padding: 0;
+}
+
+/* Task 2 Layout */
+
+iframe {
+  width: var(--width-section);
 }

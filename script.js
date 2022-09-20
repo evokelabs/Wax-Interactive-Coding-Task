@@ -1,3 +1,5 @@
+// Task 1 - Javascript
+
 const divisibleButton = document.getElementById('divisibleButton')
 const divisibleText = document.getElementById('divisibleText')
 const divisibleSumOfInteger = document.getElementById('divisibleSumOfInteger')
