@@ -10,7 +10,9 @@
 
 
 <body>
+    <h1 style="margin: 0;">Wax Interactive & Evoke Labs Tasks</h1>
     <section>
+        <hr>
         <h1>Task 1 - JS/Programming Skills</h1>
         <div>
             <label>Integer:</label>
@@ -23,22 +25,66 @@
         <a href="./divisibleBySum.js">View JS function</a>
     </section>
     <section>
+        <hr>
         <h1>Task 2 - Frontend Development</h1>
-        <iframe src="./Task2.html" title="Task 2 - Frontend Development" style="border:none; height:550px"></iframe>
+        <iframe scrolling="no" src="./Task2.html" title="Task 2 - Frontend Development"
+            style="border:none; height:550px; "></iframe>
         <br />
         <a href="./Task2.html">View Frontend Development Page</a>
     </section>
-
-    <!-- JS will be required to make the Read more button work as expected. You are not allowed to use any frameworks or libraries, except for jQuery if required.
-
-The final result should be responsive for devices with a minimum width of 375px wide. The header is to be a fixed height.
- -->
     <section>
+        <hr>
         <h1>Task 3 - MySQL</h1>
+        <textarea>
+SELECT name, value as legs,value as class
+FROM animals AS a
+INNER JOIN
+attributes AS at
+ON a.id = at.animal_id
+WHERE value REGEXP '^[0-9]+$';
+        </textarea>
+        <table cellspacing="0" class="nowrap" width='550' ;>
+            <thead>
+                <tr>
+                    <th title="animals.name" style="text-align: left;">name</th>
+                    <th title="attributes.value" style="text-align: left;">legs</th>
+                    <th title="attributes.value" style="text-align: left;">class</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lion</td>
+                    <td>4</td>
+                    <td>4</td>
+                </tr>
+                <tr class="odd">
+                    <td>Kangaroo</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Shark</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr class="odd">
+                    <td>Octopus</td>
+                    <td>8</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Spider</td>
+                    <td>8</td>
+                    <td>8</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
-    <script src="script.js" defer></script>
+
+
     <script src="divisibleBySum.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

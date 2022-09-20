@@ -5,6 +5,11 @@ const divisibleText = document.getElementById('divisibleText')
 const divisibleSumOfInteger = document.getElementById('divisibleSumOfInteger')
 
 divisibleButton.onclick = () => {
+  divisibleButtonFunction()
+}
+
+divisibleButtonFunction = () => {
+  console.log('sup')
   divisibleObject = {}
   divisibleInteger = document.getElementById('divisibleInteger').value
   divisibleByNum = document.getElementById('divisibleByNum').value
@@ -12,3 +17,4 @@ divisibleButton.onclick = () => {
     SumOfAllDigits(divisibleInteger, divisibleByNum)
   )
 }
+divisibleButtonFunction()

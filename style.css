@@ -17,6 +17,13 @@ body {
   align-items: center;
   justify-content: center;
   margin: 20px;
+  max-width: 1600px;
+  margin: 30px auto;
+}
+
+hr {
+  width: 50%;
+  opacity: 0.5;
 }
 
 section {
@@ -57,3 +64,10 @@ textarea {
 iframe {
   width: var(--width-section);
 }
+
+table {
+  padding-top: 1em;
+  width: var(--width-section);
+}
+
+/* Task 3 Layout */
