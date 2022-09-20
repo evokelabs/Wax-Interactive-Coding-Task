@@ -1,17 +1,11 @@
-let defaultInteger = 37
-let divisibleObject = {}
-
 const SumOfAllDigits = (integer, divisibleByNum = 5) => {
-  console.log('Input: \n' + integer)
+  //Calc sum of digits loop
   let sum = 0
-  let numString = integer + ''
+  let numString = integer.toString()
   for (var i = 0; i < numString.length; i++) {
     sum = sum + Number(numString.charAt(i))
   }
-  DivisibleBySum(sum, divisibleByNum)
-}
-
-const DivisibleBySum = (sum, divisibleByNum) => {
+  //Calc sum of all digits against divisibleByNum loop
   for (var i = 2; i <= divisibleByNum; i++) {
     if (sum % i === 0) {
       divisibleObject[`sum-of-digits-divisible-by-${i}`] = true
@@ -21,5 +15,3 @@ const DivisibleBySum = (sum, divisibleByNum) => {
   }
   return divisibleObject
 }
-
-SumOfAllDigits(defaultInteger)
